@@ -111,6 +111,3 @@ async def add_film(film: Film):
     films = cur.fetchall()
     DATA_FILMS = correctDBFilms(films)
     return {"message": f"film '{film.title}' was added."}
-
-if __name__ == "__main__":
-    uvicorn.run(app, host="127.0.0.1", port=8000)
